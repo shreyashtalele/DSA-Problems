@@ -119,3 +119,6 @@ function indexofSmallest(array) {
 }
 
 console.log(indexofSmallest(array));
+
+
+//Check Sorted
