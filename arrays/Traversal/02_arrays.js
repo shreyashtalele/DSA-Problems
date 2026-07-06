@@ -299,3 +299,66 @@ function findDifference(array) {
 }
 
 console.log("Difference:", findDifference([15, 8, 22, 4, 10]));
+
+
+
+// ============================================================
+// 9. Find the Product of All Elements
+// ============================================================
+
+/*
+Step 1: Initialize product = 1.
+
+Step 2: Traverse every element of the array.
+
+Step 3: Multiply the current product
+        with the current element.
+
+Step 4: Store the updated product.
+
+Step 5: After completing the traversal,
+        return the final product.
+*/
+
+function productofAllElements(array) {
+    let product = 1;
+    for (let index = 0; index < array.length; index++) {
+        product *= array[index];
+    }
+    return product;
+}
+
+console.log(productofAllElements([15, 8, 22, 4, 10]));
+
+
+// ============================================================
+// 10. Reverse the Array (Using Extra Array)
+// ============================================================
+
+/*
+Step 1: Create an empty array
+        to store the reversed elements.
+
+Step 2: Start traversing the original array
+        from the last index.
+
+Step 3: Push the current element
+        into the new array.
+
+Step 4: Continue until the first element
+        of the original array is reached.
+
+Step 5: Return the new reversed array.
+*/
+
+function arrayReverse(array) {
+    let newarray = [];
+
+    for (let index = array.length - 1; index >= 0; index--) {
+        newarray.push(array[index]);
+    }
+
+    return newarray;
+}
+
+console.log(arrayReverse([15, 8, 22, 4, 10]));
