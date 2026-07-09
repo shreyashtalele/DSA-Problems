@@ -15,7 +15,7 @@ function countNumberofCharacters(string) {
     }
     return count
 }
-console.log(countNumberofCharacters(string));
+// console.log(countNumberofCharacters(string));
 
 
 //Count vowels.
@@ -42,7 +42,7 @@ function countVowels(string) {
     return vowelCount
 }
 
-console.log(countVowels(string));
+// console.log(countVowels(string));
 
 //Count consonants.
 
@@ -64,7 +64,7 @@ function countConsonants(string) {
     return consonants;
 }
 
-console.log(countConsonants(string));
+// console.log(countConsonants(string));
 
 
 // Count uppercase letters.
@@ -81,7 +81,7 @@ function countUpperCase(string) {
     }
     return upperCount
 }
-console.log(countUpperCase(string));
+// console.log(countUpperCase(string));
 
 
 //Count lowercase letters.
@@ -99,7 +99,7 @@ function countLowerCase(string) {
     return lowerCount
 }
 
-console.log(countLowerCase(string));
+// console.log(countLowerCase(string));
 
 // //Count digits.
 // function countDigits(string) {
@@ -135,4 +135,50 @@ function countDigits(string) {
 
     return digitCount;
 }
-console.log(countDigits("1Javascript2"));
+// console.log(countDigits("1Javascript2"));
+
+
+
+
+function countSpecialCharacters(string) {
+    let specialcharacters = 0;
+
+    for (let character of string) {
+        let isUpper = character >= 'A' && character <= 'Z'
+        let isLower = character >= 'a' && character <= 'z'
+        let isDigit = character >= '0' && character <= '9'
+        if (!isUpper && !isLower && !isDigit) {
+            specialcharacters++;
+        }
+    }
+    return specialcharacters
+}
+
+// console.log(countSpecialCharacters("Hello@123!"));
+
+
+//Find the first occurrence of a character
+
+function firstOccurrence(string, target) {
+    for (let index in string) {
+        if (string[index] === target) {
+            return index
+        }
+    }
+    return -1
+}
+
+
+// console.log(firstOccurrence('BSAAA', 'A'));
+
+
+function lastOccurrence(string, target) {
+    for (let index = string.length; index >= 0; index--) {
+        if (string[index] === target) {
+            return index
+        }
+    }
+    return -1
+}
+
+console.log(lastOccurrence("BSAA", 'A'));
