@@ -143,7 +143,7 @@ function findLongestWord(string) {
     }
 }
 
-console.log(findLongestWord("I love JavaScript"));
+//console.log(findLongestWord("I love JavaScript"));
 
 
 //Find the shortest word.
@@ -172,4 +172,31 @@ function findShortestWord(string) {
     return shortestWord;
 }
 
-console.log(findShortestWord("I love JavaScript"));
+//console.log(findShortestWord("I love JavaScript"));
+
+
+//Reverse each word in a sentence.
+
+/* 
+
+ */
+function reverseEachWord(string) {
+    let reverseSentence = ''
+    let word = ''
+
+    for (let char of string) {
+        if (char === ' ') {
+            reverseSentence += reverseString(word) + " "
+            word = ''
+        }
+        else {
+            word += char
+        }
+    }
+    if (word !== "") {
+        reverseSentence += reverseString(word);
+    }
+    return reverseSentence
+}
+
+console.log(reverseEachWord("I evol avaJ"));
