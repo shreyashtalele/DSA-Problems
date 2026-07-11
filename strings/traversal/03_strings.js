@@ -68,3 +68,17 @@ function countOccurrencesofSubstring(string, target) {
 }
 
 console.log(countOccurrencesofSubstring("banana", "ana"));
+
+
+function indicesofCharacter(string, target) {
+
+    let indices = []
+    for (let index = 0; index < string.length; index++) {
+        if (string[index] === target) {
+            indices.push(index)
+        }
+    }
+    return indices
+}
+
+console.log(indicesofCharacter("Javascript", "a"));
