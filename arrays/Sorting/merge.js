@@ -7,8 +7,7 @@ function merge(left, right) {
         if (left[left_ptr] > right[right_ptr]) {
             result.push(right[right_ptr])
             right_ptr++
-        }
-        else {
+        } else {
             result.push(left[left_ptr])
             left_ptr++
         }
@@ -22,6 +21,7 @@ function merge(left, right) {
         result.push(right[right_ptr])
         right_ptr++
     }
+
     return result
 }
 
